@@ -6,7 +6,7 @@
 from dotenv import load_dotenv
 
 
-class BaseUtil:
+class OpenVpnUtil:
     def __init__(self):
         load_dotenv()
 
