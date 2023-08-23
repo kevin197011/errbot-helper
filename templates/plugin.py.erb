@@ -1,0 +1,15 @@
+import re
+from errbot import BotPlugin, botcmd, re_botcmd
+
+
+class <%=@name.capitalize %>(BotPlugin):
+
+    @botcmd(split_args_with=None)
+    def try<%=@name %>(self, msg, args):
+        yield "try<%=@name %> is ok! @{}".format(msg.frm._username)
+
+    @re_botcmd(
+        pattern=r"(^| )<%=@name %>.*", prefixed=False, flags=re.DOTALL | re.IGNORECASE
+    )
+    def call<%=@name %>(self, msg, args):
+        yield "regex <%=@name %>. @{}".format(msg.frm._username)

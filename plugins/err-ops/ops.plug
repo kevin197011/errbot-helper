@@ -1,0 +1,9 @@
+[Core]
+Name = Ops
+Module = ops
+
+[Documentation]
+Description = Plugin ops.
+
+[Python]
+Version = 3
